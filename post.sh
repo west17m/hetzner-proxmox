@@ -11,3 +11,8 @@ apt update && apt -yq full-upgrade
 # install proxmox
 export DEBIAN_FRONTEND=noninteractive
 apt install -yq proxmox-ve postfix open-iscsi
+
+clear
+echo "set root password"
+passwd
+exit 0
