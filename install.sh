@@ -18,6 +18,6 @@ echo
 /root/.oldroot/nfs/install/installimage -a -c proxmox6.config -n "$FQDN" -r no -t yes -x post.sh
 
 echo -e "\n\nafter reboot, your server will be available at\nhttps://$FQDN:8006/\n\n\nyou may reboot now"
-((sleep 1 && rm -rf hetzner-proxmox-main main.zip))
+rm -rf hetzner-proxmox-main main.zip
 
 exit 0
