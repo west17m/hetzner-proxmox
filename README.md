@@ -5,9 +5,8 @@ Actively under development. Not for production.
 Goal: deploy a proxmox-ve node in hetzner environment.
 
     # from the hetzner rescue environment
-    wget https://raw.githubusercontent.com/west17m/hetzner-proxmox/main/bootstrap.sh
+    wget https://raw.githubusercontent.com/west17m/hetzner-proxmox/main/bootstrap.sh && \
     bash bootstrap.sh
-
 
 wget https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20210421T214502Z/install-amd64-minimal-20210421T214502Z.iso
 

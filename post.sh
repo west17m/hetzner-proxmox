@@ -19,7 +19,31 @@ apt update && apt -yq full-upgrade
 export DEBIAN_FRONTEND=noninteractive
 apt install -yq proxmox-ve postfix open-iscsi ifupdown2
 
-clear
-echo "set root password"
+# clear
+
+DIR=https://raw.githubusercontent.com/west17m/hetzner-proxmox/main"
+
+# firewall
+cd /root
+wget "$DIR"/root/firewall.sh
+chmod 770 firewall.sh
+chown root:root firewall.sh
+
+# network interface
+cd /etc/network
+mv interfaces interface.bak
+wget "$DIR"/etc/network/interfaces
+chmod 664 interfaces
+chown root:root interfaces
+
+# pve
+cd /etc/pve
+mv storage.cfg storage.cfg.bak
+wget "$DIR"/etc/pve/storage.cfg
+chmod 664 storage.cfg
+chown www-data:www-data storage.cfg
+
+
+echo "set root password for $FQDN"
 passwd
 exit 0
