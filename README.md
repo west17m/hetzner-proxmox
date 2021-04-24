@@ -1,5 +1,9 @@
 # hetzner-proxmox
 
+    wget -O - https://raw.githubusercontent.com/west17m/hetzner-proxmox/main/bootstrap.sh | bash
+
+Or this
+
     # from the hetzner rescue environment
     wget https://github.com/west17m/hetzner-proxmox/archive/refs/heads/main.zip
     unzip main.zip
