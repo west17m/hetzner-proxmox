@@ -37,12 +37,12 @@ wget "$DIR"/etc/network/interfaces
 chmod 664 interfaces
 chown root:root interfaces
 
-# pve
-cd /etc/pve/
+# pve storage
+cd /etc/pve
 #mv storage.cfg storage.cfg.bak
 wget "$DIR"/etc/pve/storage.cfg
-chmod 640 storage.cfg
 chown root:www-data storage.cfg
+chmod 640 storage.cfg
 
 # update lxc
 
