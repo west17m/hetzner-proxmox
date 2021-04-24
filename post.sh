@@ -41,18 +41,18 @@ chown root:root interfaces
 cd /root
 #mv storage.cfg storage.cfg.bak
 wget "$DIR"/etc/pve/storage.cfg
-#chown root:www-data storage.cfg
-#chmod 640 storage.cfg
+chown root:www-data storage.cfg
+chmod 640 storage.cfg
 
 # update lxc
 
 # download gentoo
-/usr/bin/pveam update
-pveam download local $(pveam available --section system | grep gentoo | sed 's:system.*\(gentoo-current-default_.*\):\1:')
+#/usr/bin/pveam update
+#pveam download local $(pveam available --section system | grep gentoo | sed 's:system.*\(gentoo-current-default_.*\):\1:')
 
-for i in  $(pveam available --section system | grep debian | sed 's:system.*\(debian-.*\):\1:')
-  do pveam download local $i
-done
+#for i in  $(pveam available --section system | grep debian | sed 's:system.*\(debian-.*\):\1:')
+#  do pveam download local $i
+#done
 
 echo "$(hostname) > set root password"
 passwd
