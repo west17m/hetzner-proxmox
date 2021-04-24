@@ -1,4 +1,11 @@
 #!/bin/bash
+# post.sh
+# author: Travis Osterman
+# created: 2021-04-24
+#
+# This is run in the chrooted server environment following OS installation.
+#
+
 # proxmox install on debian 10
 echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
 wget http://download.proxmox.com/debian/proxmox-ve-release-6.x.gpg -O /etc/apt/trusted.gpg.d/proxmox-ve-release-6.x.gpg

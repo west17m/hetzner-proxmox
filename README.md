@@ -18,3 +18,9 @@ pveam available
 pveam available --section system
 
 pveam download local gentoo-current-default_20200310_amd64.tar.xz
+
+Links
+* https://community.hetzner.com/tutorials/install-and-configure-proxmox_ve
+* https://pve.proxmox.com/wiki/Network_Configuration
+* https://github.com/IronicBadger/ansible-role-proxmox-nag-removal
+* https://www.sysorchestra.com/proxmox-5-on-hetzner-root-server-with-ipv4
