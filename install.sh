@@ -9,6 +9,7 @@
 # for a fully qualified domain name and root password. The remainder of configuration is in
 # proxmox6.config. Following Debian installation, post.sh is run to install proxmox
 #
+set -e
 
 echo -n "Hostname (FQDN): "
 read FQDN

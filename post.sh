@@ -39,7 +39,7 @@ chown root:root interfaces
 
 # pve
 cd /etc/pve
-mv storage.cfg storage.cfg.bak
+#mv storage.cfg storage.cfg.bak
 wget "$DIR"/etc/pve/storage.cfg
 chmod 664 storage.cfg
 chown www-data:www-data storage.cfg
