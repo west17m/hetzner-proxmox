@@ -1,16 +1,13 @@
 # hetzner-proxmox
 
-    wget -O - https://raw.githubusercontent.com/west17m/hetzner-proxmox/main/bootstrap.sh | bash
+Actively under development. Not for production.
 
-Or this
+Goal: deploy a proxmox-ve node in hetzner environment.
 
     # from the hetzner rescue environment
-    wget https://github.com/west17m/hetzner-proxmox/archive/refs/heads/main.zip
-    unzip main.zip
-    pushd hetzner-proxmox-main
-    bash install.sh
-    popd
-    
+    wget https://raw.githubusercontent.com/west17m/hetzner-proxmox/main/bootstrap.sh
+    bash bootstrap.sh
+
 
 wget https://bouncer.gentoo.org/fetch/root/all/releases/amd64/autobuilds/20210421T214502Z/install-amd64-minimal-20210421T214502Z.iso
 
