@@ -38,11 +38,11 @@ chmod 664 interfaces
 chown root:root interfaces
 
 # pve storage
-cd /etc/pve
+cd /root
 #mv storage.cfg storage.cfg.bak
 wget "$DIR"/etc/pve/storage.cfg
-chown root:www-data storage.cfg
-chmod 640 storage.cfg
+#chown root:www-data storage.cfg
+#chmod 640 storage.cfg
 
 # update lxc
 
