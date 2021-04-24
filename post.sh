@@ -21,7 +21,7 @@ apt install -yq proxmox-ve postfix open-iscsi ifupdown2
 
 # clear
 
-DIR=https://raw.githubusercontent.com/west17m/hetzner-proxmox/main"
+DIR="https://raw.githubusercontent.com/west17m/hetzner-proxmox/main"
 
 # firewall
 cd /root
@@ -44,6 +44,6 @@ chmod 664 storage.cfg
 chown www-data:www-data storage.cfg
 
 
-echo "set root password for $FQDN"
+echo "$FQDN > set root password"
 passwd
 exit 0
