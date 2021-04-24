@@ -32,19 +32,28 @@ chown root:root firewall.sh
 
 # network interface
 cd /etc/network
-mv interfaces interface.bak
+mv interfaces interfaces.bak
 wget "$DIR"/etc/network/interfaces
 chmod 664 interfaces
 chown root:root interfaces
 
 # pve
-cd /etc/pve
+cd /etc/pve/
 #mv storage.cfg storage.cfg.bak
 wget "$DIR"/etc/pve/storage.cfg
-chmod 664 storage.cfg
-chown www-data:www-data storage.cfg
+chmod 640 storage.cfg
+chown root:www-data storage.cfg
 
+# update lxc
 
-echo "$FQDN > set root password"
+# download gentoo
+/usr/bin/pveam update
+pveam download local $(pveam available --section system | grep gentoo | sed 's:system.*\(gentoo-current-default_.*\):\1:')
+
+for i in  $(pveam available --section system | grep debian | sed 's:system.*\(debian-.*\):\1:')
+  do pveam download local $i
+done
+
+echo "$(hostname) > set root password"
 passwd
 exit 0
